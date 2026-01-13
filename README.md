@@ -1,3 +1,5 @@
+<div align="center">
+
 # PennyWise - Aplikasi Pencatat Pengeluaran
 
 <p align="center">
@@ -6,29 +8,30 @@
 
 Aplikasi mobile Android modern untuk pencatatan dan manajemen pengeluaran pribadi dengan antarmuka yang bersih dan intuitif menggunakan Jetpack Compose, Material Design 3, dan integrasi API cPanel.
 
-## 📱 Screenshot
+[![Platform](https://img.shields.io/badge/platform-Android-green.svg)](https://www.android.com/) [![API](https://img.shields.io/badge/API-24%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=24) [![Kotlin](https://img.shields.io/badge/Kotlin-2.0.21-blue.svg)](https://kotlinlang.org) [![License](https://img.shields.io/badge/License-Educational-orange.svg)](LICENSE)
 
-| Dashboard | Transaksi | Tambah/Edit | Laporan |
-|-----------|-----------|-------------|---------|
-| Overview dengan statistik | Daftar transaksi harian | Form input dinamis | Grafik & analitik |
+[Fitur](#fitur-utama) • [Teknologi](#teknologi--library) • [Arsitektur](#arsitektur) • [API Integration](#api-integration) • [Cara Menjalankan](#cara-menjalankan) • [Dokumentasi Kode](#dokumentasi-kode) • [Design Pattern](#design-patterns) • [Testing](#testing) • [Security & Best Practices](#security--best-practices) • [TODO & Roadmap](#todo--roadmap) • [Contributing](#contributing)
 
-## ✨ Fitur Utama
 
-### 🏠 Dashboard
+</div>
+
+## Fitur Utama
+
+### Dashboard
 - **Overview Pengeluaran**: Total pengeluaran dengan statistik real-time
 - **Statistik Cepat**: Jumlah transaksi dan total item
 - **Recent Transactions**: 5 transaksi terakhir dengan quick access
 - **Quick Actions**: Tombol cepat untuk menambah transaksi baru
 - **Pull to Refresh**: Sinkronisasi data dengan server
 
-### 📋 Manajemen Transaksi
+### Manajemen Transaksi
 - **List View Terorganisir**: Pengelompokan transaksi per tanggal
 - **Detail Dialog**: Tampilan detail lengkap dengan opsi edit/delete
 - **Real-time Updates**: Otomatis refresh setelah CRUD operation
 - **Empty State**: Ilustrasi informatif saat belum ada data
 - **Loading States**: Indikator loading yang smooth
 
-### ➕ Tambah/Edit Transaksi
+### Tambah/Edit Transaksi
 - **Form Dinamis**: Tambah multiple items dalam satu transaksi
 - **Smart Input**: Otomatis format angka tanpa desimal .0
 - **Date & Time Picker**: Material Design 3 picker
@@ -36,7 +39,7 @@ Aplikasi mobile Android modern untuk pencatatan dan manajemen pengeluaran pribad
 - **Validation**: Form validation sebelum submit
 - **Edit Mode**: Load data existing untuk update
 
-### 📊 Laporan & Analytics
+### Laporan & Analytics
 - **Period Filter**: Minggu Ini, Bulan Ini, Tahun Ini
 - **Dynamic Charts**: Bar chart yang adaptive per periode
   - Minggu: 7 hari (Mon-Sun)
@@ -46,12 +49,12 @@ Aplikasi mobile Android modern untuk pencatatan dan manajemen pengeluaran pribad
 - **Statistics Cards**: Total pengeluaran, jumlah transaksi, rata-rata
 - **Period-based Averages**: Rata-rata harian atau bulanan
 
-### ⚙️ Pengaturan
+### Pengaturan
 - **Theme Switcher**: Light/Dark mode
 - **Data Management**: Backup & restore options
 - **About**: Informasi aplikasi dan versi
 
-## 🛠️ Teknologi & Library
+## Teknologi & Library
 
 ### Core Technologies
 - **Language**: Kotlin 2.0.0
@@ -91,7 +94,7 @@ org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0
 org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0
 ```
 
-## 🏗️ Arsitektur
+## Arsitektur
 
 ### MVVM (Model-View-ViewModel)
 ```
@@ -131,7 +134,7 @@ app/
 - **StateFlow**: Reactive state untuk transactions dan operations
 - **LaunchedEffect**: Handle state changes di Composable
 
-## 🌐 API Integration
+## API Integration
 
 ### Backend Configuration
 - **Base URL**: `https://appocalypse.my.id/api_pennywise.php`
@@ -174,7 +177,7 @@ Response: { "status": "success", "message": "..." }
 - User-friendly error messages di UI
 - Retry mechanism dengan refresh button
 
-## 🚀 Cara Menjalankan
+## Cara Menjalankan
 
 ### Prerequisites
 - Android Studio Koala | 2024.1.1+
@@ -216,7 +219,7 @@ Response: { "status": "success", "message": "..." }
 ./gradlew assembleRelease
 ```
 
-## 📖 Dokumentasi Kode
+## Dokumentasi Kode
 
 ### Data Models
 
@@ -278,7 +281,7 @@ sealed class Screen(val route: String) {
 }
 ```
 
-## 🎨 Design Patterns
+## Design Patterns
 
 ### 1. Repository Pattern
 Abstraksi layer data untuk memisahkan logic bisnis dari sumber data:
@@ -326,7 +329,7 @@ fun TransactionResponse.toTransaction(): Transaction {
 }
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Unit Tests
 ```kotlin
@@ -346,17 +349,17 @@ class TransactionViewModelTest {
 }
 ```
 
-## 🔐 Security & Best Practices
+## Security & Best Practices
 
-- ✅ HTTPS untuk semua API calls
-- ✅ ProGuard rules untuk obfuscation (release build)
-- ✅ No hardcoded credentials
-- ✅ Input validation di semua form
-- ✅ Error handling di setiap network call
-- ✅ Coroutines untuk async operations
-- ✅ Memory leak prevention (ViewModel lifecycle)
+- HTTPS untuk semua API calls
+- ProGuard rules untuk obfuscation (release build)
+- No hardcoded credentials
+- Input validation di semua form
+- Error handling di setiap network call
+- Coroutines untuk async operations
+- Memory leak prevention (ViewModel lifecycle)
 
-## 📋 TODO & Roadmap
+## TODO & Roadmap
 
 ### Version 1.1
 - [ ] Offline mode dengan Room Database
@@ -376,7 +379,7 @@ class TransactionViewModelTest {
 - [ ] Shared expenses (split bill)
 - [ ] Financial insights dengan AI
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -393,24 +396,93 @@ Contributions are welcome! Please follow these steps:
 - Write unit tests for new features
 - Update documentation
 
-## 📄 License
+```
+Educational Use License
+Copyright (c) 2025 Zeni Ramadan
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Permission is granted to use, copy, modify, and distribute this software
+for educational and non-commercial purposes only.
+```
 
-## 👨‍💻 Author
+---
 
-**Your Name**
-- GitHub: [@your-username](https://github.com/your-username)
-- Email: your.email@example.com
+## Author & Contributors
+<div align="center">
+<table>
+   <tr>
+      <td align="center">
+         <a href="https://github.com/zeniramadan">
+               <img src="https://github.com/zeniramadan.png" width="100px;" alt="Zeni Ramadan"/><br />
+               <sub><b>Zeni Ramadan</b></sub>
+         </a><br />
+         <sub>Team Leader & Ideation</sub><br />
+         <sub>
+			<a href="https://github.com/zeniramadan" target="_blank">
+			<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+			</a>
+         </sub>
+      </td>
+      <td align="center">
+         <a href="https://github.com/famss-star">
+               <img src="https://github.com/famss-star.png" width="100px;" alt="Rifa Maulana"/><br />
+               <sub><b>Rifa Maulana</b></sub>
+         </a><br />
+         <sub>Bug Fixes & Improvements</sub><br />
+         <sub>
+			<a href="https://github.com/famss-star" target="_blank">
+			<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+			</a>
+         </sub>
+      </td>
+      <td align="center">
+         <a href="https://github.com/ocktaniasalma">
+               <img src="https://github.com/ocktaniasalma.png" width="100px;" alt="Salma Oktania"/><br />
+               <sub><b>Salma Oktania</b></sub>
+         </a><br />
+         <sub>UI/UX Designer</sub><br />
+         <sub>
+			<a href="https://github.com/ocktaniasalma" target="_blank">
+			<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+			</a>
+         </sub>
+      </td>
+   </tr>
+</table>
+</div>
 
-## 🙏 Acknowledgments
+### Roles & Contributions
+
+<div align="center">
+
+| Contributor | Role | Responsibilities |
+|-------------|------|------------------|
+| **Zeni Ramadan** | Backend Developer | Logic Database, tabel MySQL |
+| **Rifa Maulana** | Bug Fixer & Developer | Debugging, code optimization, bug fixes, improvements |
+| **Salma Oktania** | UI/UX Designer | Interface design, layout, theming, user experience |
+| **Raina Radiatushiva** | Ideation | Konsep aplikasi |
+
+
+---
+</div>
+
+## Support & Contact
+
+### Get Help
+
+Jika Anda memiliki pertanyaan, saran, atau menemukan bug:
+
+1. Baca dokumentasi ini terlebih dahulu
+2. Cek [Existing Issues](https://github.com/zeniramadan/PennyWise/issues)
+3. [Create New Issue](https://github.com/zeniramadan/PennyWise/issues/new) jika belum ada
+
+## Acknowledgments
 
 - Material Design 3 guidelines
 - Jetpack Compose documentation
 - Android Developers community
 - Open source libraries contributors
 
-## 📞 Support
+## Support
 
 Jika Anda menemukan bug atau memiliki saran:
 - Open an [issue](https://github.com/your-username/PennyWise/issues)
@@ -429,129 +501,8 @@ Jika Anda menemukan bug atau memiliki saran:
   <img src="https://img.shields.io/badge/Material%20Design%203-757575?style=for-the-badge&logo=material-design&logoColor=white" />
 </p>
 
-implementation(platform("androidx.compose:compose-bom:2025.01.00"))
-implementation("androidx.compose.ui:ui")
-implementation("androidx.compose.material3:material3")
-implementation("androidx.compose.ui:ui-tooling-preview")
-
-// Navigation
-implementation("androidx.navigation:navigation-compose:2.8.7")
-
-// Material Icons Extended
-implementation("androidx.compose.material:material-icons-extended:1.7.6")
-
-// Charts (Vico)
-implementation("com.patrykandpatrick.vico:compose:2.0.0-alpha.28")
-implementation("com.patrykandpatrick.vico:compose-m3:2.0.0-alpha.28")
-implementation("com.patrykandpatrick.vico:core:2.0.0-alpha.28")
-
-// Lifecycle
-implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
-implementation("androidx.activity:activity-compose:1.12.2")
-```
-
-## 📁 Struktur Project
-
-```
-app/src/main/java/com/example/pennywise/
-├── data/
-│   ├── Category.kt           # Enum kategori transaksi dengan ikon
-│   ├── Transaction.kt        # Data class untuk transaksi
-│   └── TransactionType.kt    # Enum tipe transaksi (Income/Expense)
-│
-├── navigation/
-│   ├── Screen.kt            # Sealed class untuk routes
-│   ├── BottomNavItem.kt     # Data class untuk bottom nav items
-│   └── NavGraph.kt          # Navigation graph
-│
-├── ui/
-│   ├── screens/
-│   │   ├── DashboardScreen.kt        # Halaman dashboard
-│   │   ├── TransactionsScreen.kt    # Halaman daftar transaksi
-│   │   ├── AddTransactionScreen.kt  # Halaman tambah transaksi
-│   │   ├── ReportsScreen.kt         # Halaman laporan
-│   │   └── SettingsScreen.kt        # Halaman pengaturan
-│   │
-│   └── theme/
-│       ├── Color.kt         # Definisi warna tema
-│       ├── Type.kt          # Definisi typography
-│       └── Theme.kt         # Setup tema Material 3
-│
-└── MainActivity.kt          # Entry point aplikasi
-```
-
-## 🚀 Cara Menjalankan
-
-1. **Clone atau buka project di Android Studio**
-   ```bash
-   cd c:\Users\szal\AndroidStudioProjects\PennyWise
-   ```
-
-2. **Sync Gradle**
-   - Android Studio akan otomatis sync dependencies
-   - Atau jalankan: `./gradlew build`
-
-3. **Run aplikasi**
-   - Pilih emulator atau device
-   - Klik Run atau tekan `Shift + F10`
-
-## 📱 Minimum Requirements
-
-- **Min SDK**: 24 (Android 7.0 Nougat)
-- **Target SDK**: 36
-- **Compile SDK**: 36
-
-## 🎯 Kategori Transaksi
-
-### Pengeluaran (Expense)
-- 🍽️ Makanan
-- 🚗 Transportasi
-- 🎬 Hiburan
-- 🛒 Belanja
-- 🏥 Kesehatan
-- 📚 Pendidikan
-- 🧾 Tagihan
-- ➕ Lainnya
-
-### Pemasukan (Income)
-- 💼 Gaji
-- 💻 Freelance
-- 📈 Investasi
-- 🎁 Hadiah
-- ➕ Lainnya
-
-## 🔜 Fitur yang Akan Datang
-
-- [ ] Integrasi Room Database untuk penyimpanan lokal
-- [ ] ViewModel dan State Management
-- [ ] Export data ke CSV/PDF
-- [ ] Backup ke cloud (Google Drive)
-- [ ] Reminder/notification untuk pencatatan
-- [ ] Multi-currency support
-- [ ] Budget planning dan tracking
-- [ ] Recurring transactions
-- [ ] Search dan filter advanced
-- [ ] Biometric authentication
-
-## 📝 Catatan Pengembangan
-
-Aplikasi ini saat ini fokus pada **UI/UX implementation**. Data yang ditampilkan adalah sample data. Untuk implementasi production, perlu ditambahkan:
-
-1. **ViewModel** untuk state management
-2. **Repository pattern** untuk data layer
-3. **Room Database** untuk local storage
-4. **DataStore** untuk preferences
-5. **Coroutines** untuk async operations
-6. **Dependency Injection** (Hilt/Koin)
-
-## 📄 Lisensi
-
-Project ini dibuat untuk keperluan pembelajaran dan portfolio.
-
-## 👨‍💻 Developer
-
-Dibuat dengan ❤️ menggunakan Jetpack Compose dan Material Design 3
-
 ---
 
+<p align="center">
 **PennyWise v1.0.0** - Kelola Keuangan dengan Bijak 💰
+</p>
