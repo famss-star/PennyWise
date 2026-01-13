@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Coin base - pixel art style -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M40,28 L68,28 L68,32 L72,32 L72,36 L76,36 L76,40 L80,40 L80,68 L76,68 L76,72 L72,72 L72,76 L68,76 L68,80 L40,80 L40,76 L36,76 L36,72 L32,72 L32,68 L28,68 L28,40 L32,40 L32,36 L36,36 L36,32 L40,32 Z"/>
+
+    <!-- Inner glow -->
+    <path
+        android:fillColor="#FFC700"
+        android:pathData="M40,32 L64,32 L64,36 L68,36 L68,40 L72,40 L72,64 L68,64 L68,68 L64,68 L64,72 L40,72 L40,68 L36,68 L36,64 L32,64 L32,40 L36,40 L36,36 L40,36 Z"/>
+
+    <!-- Letter P in pixel style - digeser +4 total dari original -->
+    <path
+        android:fillColor="#FFA500"
+        android:pathData="M48,44 L56,44 L56,48 L60,48 L60,52 L56,52 L56,56 L52,56 L52,64 L48,64 Z M52,48 L52,52 L56,52 L56,48 Z"/>
+
+    <!-- Coin outline/shadow -->
+    <path
+        android:fillColor="#CC9900"
+        android:pathData="M40,76 L40,80 L68,80 L68,76 M72,72 L72,76 L76,76 L76,72 M76,68 L76,72 L80,72 L80,68"/>
+
+</vector>
