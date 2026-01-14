@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.pennywise.ui.fragments.DashboardFragment"
+        android:label="Dashboard" />
+
+    <fragment
+        android:id="@+id/transactionsFragment"
+        android:name="com.example.pennywise.ui.fragments.TransactionsFragment"
+        android:label="Transaksi" />
+
+    <fragment
+        android:id="@+id/addTransactionFragment"
+        android:name="com.example.pennywise.ui.fragments.AddTransactionFragment"
+        android:label="Tambah Transaksi">
+        <argument
+            android:name="transactionId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.example.pennywise.ui.fragments.ReportsFragment"
+        android:label="Laporan" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.pennywise.ui.fragments.SettingsFragment"
+        android:label="Pengaturan" />
+
+</navigation>
