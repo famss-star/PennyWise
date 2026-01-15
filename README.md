@@ -3,7 +3,7 @@
 # PennyWise - Aplikasi Pencatat Pengeluaran
 
 <p align="center">
-  <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" alt="PennyWise Icon" width="120"/>
+  <img src="app\src\main\res\drawable\ic_launcher_foreground.png" alt="PennyWise Icon" width="120"/>
 </p>
 
 Aplikasi mobile Android modern untuk pencatatan dan manajemen pengeluaran pribadi dengan antarmuka yang bersih dan intuitif menggunakan Jetpack Compose, Material Design 3, dan integrasi API cPanel.
